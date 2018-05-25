@@ -1,13 +1,23 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import Img from 'gatsby-image'
+import styled from 'styled-components'
 
-const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
-)
+import cvData from '../data/cv'
+import PageWrapper from '../components/PageWrapper'
+import Profile from '../components/Profile'
+import Timeline from '../components/Timeline'
+import profilePicture from '../data/ProfilePic.jpg'
 
-export default IndexPage
+export default () => (
+  <PageWrapper>
+    <Profile
+      title={cvData.title}
+      blurb={cvData.blurb}
+      profilePicture={profilePicture}
+    />
+    <Timeline
+      items={cvData.jobHistory}
+    />
+  </PageWrapper>
+);
