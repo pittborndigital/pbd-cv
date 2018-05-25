@@ -1,6 +1,8 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
+import TechnologyBadge from './TechnologyBadge'
+
 const Container = styled.div`
   padding: 30px;
 `
@@ -43,25 +45,65 @@ const TimelineIndicator = styled.div`
   z-index: 3;
 `
 
-const TimelineItemTitle = styled.h3`
+const TimelineItemTitleContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 10px;
+`
+
+const TimelineItemTitle = styled.h3`
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
 `
 
 const TimelineItemSubTitle = styled.h5`
-  font-size: 0.9rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 0.8em;
+  font-weight: normal;
+  margin: 0;
+  text-align: right;
+`
+
+const TimelineItemDetail = styled.div`
+  font-size: 1em;
+  margin-bottom: 15px;
+`
+
+const TimelineItemDescription = styled.p`
+  padding: 10px 0;
+  font-size: 1.1em;
+`
+
+const TimelineTechnologies = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 `
 
 const TimelineItem = (props) => (
   <TimelineItemContainer index={props.index}>
     <TimelineIndicator />
-    <TimelineItemTitle>{props.jobTitle}</TimelineItemTitle>
-    <TimelineItemSubTitle>{props.employer}</TimelineItemSubTitle>
-    <div><span>{props.from}</span> to <span>{props.to}</span></div>
-    <p>{props.description}</p>
+    <TimelineItemTitleContainer>
+      <TimelineItemTitle>{props.jobTitle}</TimelineItemTitle>
+      <TimelineItemSubTitle><span>{props.from}</span> to <span>{props.to}</span></TimelineItemSubTitle>
+    </TimelineItemTitleContainer>
+    <TimelineItemDetail>
+      {props.employer}
+    </TimelineItemDetail>
+    <TimelineItemDescription>
+      <ul>
+        {props.description.map(desc => (
+          <li>{desc}</li>
+        ))}
+      </ul>
+    </TimelineItemDescription>
+    <TimelineTechnologies>
+      {props.technologies.map(t => <TechnologyBadge key={t} technology={t} />)}
+    </TimelineTechnologies>
   </TimelineItemContainer>  
 )
 
