@@ -21,6 +21,7 @@ export default {
         'unstated',
         'styled-components',
         'firebase',
+        'gatsby',
       ],
     },
     {
@@ -38,12 +39,13 @@ export default {
       location: 'Hammersmith, London',
       technologies: [
         'react',
-        'redux',
         'react-native',
+        'redux',
         'stylus',
         'unstated',
         'jest',
         'WebSockets',
+        'node',
       ],
     },
     {
@@ -65,6 +67,7 @@ export default {
         'cordova',
         'd3',
         'mongo',
+        'jenkins',
       ],
     },
     {
@@ -73,11 +76,13 @@ export default {
       jobTitle: 'Technical Consultant',
       employer: 'Succeed Consultancy Ltd',
       description: [
-        'Agency-style environment consulting with various enterprises.',
-        'Tesco PLC, Morrisons PLC, HSBC, Standard Chartered Bank, Pret A Manger',
+        'Working with a variety of customers based in both the UK and abroad.',
+        'Helping large customers to make the most out of their enterprise Oracle software implementations by improving UI and UX, delivering value to large user-bases (up to 300,000 global users).',
+        'Consultative environment working to define requirements, support and train users and software owners as well as technical delivery.',
+        'Worked with customers including Tesco PLC, Morrisons PLC, HSBC, Standard Chartered Bank and Pret A Manger',
       ],
-      location: '',
-      technologies: ['javascript', 'html', 'css', 'SQL', 'PeopleCode'],
+      location: 'London, India, Leeds, Sheffield',
+      technologies: ['javascript', 'html', 'css', 'sql', 'PeopleCode'],
     },
     {
       from: 'August 2011',
@@ -86,9 +91,10 @@ export default {
       employer: 'Moreover Technologies Ltd',
       description: [
         'Development and maintenance of algorithms to scrape and categorise news sources.',
+        'Knowledge transfer with offshore resources, and contribution to technical documentation.',
       ],
       location: 'Farringdon, London',
-      technologies: ['RegExp', 'html', 'SQL'],
+      technologies: ['RegExp', 'html', 'javascript', 'sql'],
     },
   ],
 }
