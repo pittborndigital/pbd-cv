@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 import TechnologyBadge from './TechnologyBadge'
 
@@ -84,30 +84,26 @@ const TimelineTechnologies = styled.div`
   justify-content: space-around;
 `
 
-const TimelineItem = (props) => (
+const TimelineItem = props => (
   <TimelineItemContainer index={props.index}>
     <TimelineIndicator />
     <TimelineItemTitleContainer>
       <TimelineItemTitle>{props.jobTitle}</TimelineItemTitle>
-      <TimelineItemSubTitle><span>{props.from}</span> to <span>{props.to}</span></TimelineItemSubTitle>
+      <TimelineItemSubTitle>
+        <span>{props.from}</span> to <span>{props.to}</span>
+      </TimelineItemSubTitle>
     </TimelineItemTitleContainer>
-    <TimelineItemDetail>
-      {props.employer}
-    </TimelineItemDetail>
+    <TimelineItemDetail>{props.employer}</TimelineItemDetail>
     <TimelineItemDescription>
-      <ul>
-        {props.description.map(desc => (
-          <li>{desc}</li>
-        ))}
-      </ul>
+      <ul>{props.description.map(desc => <li>{desc}</li>)}</ul>
     </TimelineItemDescription>
     <TimelineTechnologies>
       {props.technologies.map(t => <TechnologyBadge key={t} technology={t} />)}
     </TimelineTechnologies>
-  </TimelineItemContainer>  
+  </TimelineItemContainer>
 )
 
-const Timeline = ({items}) => {
+const Timeline = ({ items }) => {
   const itemsMapped = items.map((i, index) => {
     return {
       ...i,
@@ -119,9 +115,7 @@ const Timeline = ({items}) => {
       <TimelineWrapper>
         <TimelineContinuum />
         <TimelineItems>
-          {itemsMapped.map(item => (
-            <TimelineItem key={item.index} {...item}/> 
-          ))}
+          {itemsMapped.map(item => <TimelineItem key={item.index} {...item} />)}
         </TimelineItems>
       </TimelineWrapper>
     </Container>

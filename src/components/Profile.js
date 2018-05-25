@@ -7,11 +7,9 @@ const Container = styled.div`
   min-height: 100px;
 `
 
-const Title = styled.h1`
-`
+const Title = styled.h1``
 
-const Blurb = styled.p`
-`
+const Blurb = styled.p``
 
 const ProfilePicture = styled.div`
   position: absolute;
@@ -29,12 +27,12 @@ const Image = styled.img`
   border-radius: 50%;
 `
 
-const Profile = ({title, blurb, profilePicture}) => (
+const Profile = ({ title, blurb, profilePicture }) => (
   <Container>
     <Title>{title}</Title>
     <Blurb>{blurb}</Blurb>
     <ProfilePicture>
-        <Image src={profilePicture} />
+      <Image src={profilePicture} />
     </ProfilePicture>
   </Container>
 )

@@ -1,6 +1,7 @@
 export default {
   title: 'Pragmatic Innovation',
-  blurb: 'Creating great user experiences with the stability and longevity of carefully crafted application design.',
+  blurb:
+    'Creating great user experiences with the stability and longevity of carefully crafted application design.',
   profilePicture: './ProfilePic.jpg',
   jobHistory: [
     {
@@ -11,15 +12,15 @@ export default {
       description: [
         'Technical partner to small businesses and start-ups to deliver user-centric solutions.',
         'Development of an e-commerce application for exciting new personalised childrens book company, Oh Zoe',
-        'Working with Bit More Media Ltd to develop a social travel/tour planning application as well as a group activity organisation and budgeting application.'
+        'Working with Bit More Media Ltd to develop a social travel/tour planning application as well as a group activity organisation and budgeting application.',
       ],
       location: 'London',
       technologies: [
-        "react",
-        "react-native",
-        "unstated",
-        "styled-components",
-        "firebase",
+        'react',
+        'react-native',
+        'unstated',
+        'styled-components',
+        'firebase',
       ],
     },
     {
@@ -36,13 +37,13 @@ export default {
       ],
       location: 'Hammersmith, London',
       technologies: [
-        "react", 
-        "redux", 
-        "react-native",
-        "stylus",
-        "unstated",
-        "jest",
-        "WebSockets",
+        'react',
+        'redux',
+        'react-native',
+        'stylus',
+        'unstated',
+        'jest',
+        'WebSockets',
       ],
     },
     {
@@ -57,13 +58,13 @@ export default {
       ],
       location: 'London, Sweden, Ireland',
       technologies: [
-        "knockout",
-        "angular",
-        "jquery",
-        "jquery-mobile",
-        "cordova",
-        "d3",
-        "mongo",
+        'knockout',
+        'angular',
+        'jquery',
+        'jquery-mobile',
+        'cordova',
+        'd3',
+        'mongo',
       ],
     },
     {
@@ -76,13 +77,7 @@ export default {
         'Tesco PLC, Morrisons PLC, HSBC, Standard Chartered Bank, Pret A Manger',
       ],
       location: '',
-      technologies: [
-        "javascript",
-        "html",
-        "css",
-        "SQL",
-        "PeopleCode",
-      ],
+      technologies: ['javascript', 'html', 'css', 'SQL', 'PeopleCode'],
     },
     {
       from: 'August 2011',
@@ -93,11 +88,7 @@ export default {
         'Development and maintenance of algorithms to scrape and categorise news sources.',
       ],
       location: 'Farringdon, London',
-      technologies: [
-        "RegExp",
-        "html",
-        "SQL",
-      ],
-    }
+      technologies: ['RegExp', 'html', 'SQL'],
+    },
   ],
 }

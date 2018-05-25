@@ -6,7 +6,6 @@ import Header from '../components/Header'
 import './index.css'
 
 const Layout = ({ children, data }) => {
-  console.log(children, data)
   return (
     <div>
       <Helmet
@@ -44,9 +43,9 @@ export const query = graphql`
   query SiteTitleQuery {
     site {
       siteMetadata {
-        title,
-        lastUpdated,
+        title
+        lastUpdated
       }
     }
   }
-`;
+`

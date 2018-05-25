@@ -26,9 +26,7 @@ const SubTitle = styled.small`
 const Header = ({ siteTitle, lastUpdated }) => (
   <Container>
     <HeaderInner>
-      <Title style={{ margin: 0 }}>
-        {siteTitle}
-      </Title>
+      <Title style={{ margin: 0 }}>{siteTitle}</Title>
       <SubTitle>
         <DateDisplay date={lastUpdated} />
       </SubTitle>

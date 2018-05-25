@@ -5,10 +5,6 @@ const Wrapper = styled.div`
   padding: 30px;
 `
 
-const PageWrapper = ({children}) => (
-  <Wrapper>
-    {children}
-  </Wrapper>
-)
+const PageWrapper = ({ children }) => <Wrapper>{children}</Wrapper>
 
 export default PageWrapper
