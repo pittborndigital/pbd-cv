@@ -1,10 +1,8 @@
 export default {
-  title: 'Pragmatic Innovation',
-  blurb:
-    '\
-    Creating great user experiences with the stability and longevity of carefully crafted application design, without sacrificing on delivery timelines.\
-    Cutting the right corners.\
-    ',
+  title: 'Responsible Innovation',
+  blurb: '\
+    Cutting the right corners to deliver high quality user experiences without sacrificing stability and longevity.\
+  ',
   profilePicture: './ProfilePic.jpg',
   jobHistory: [
     {
