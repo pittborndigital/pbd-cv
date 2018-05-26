@@ -20,6 +20,7 @@ import UNSTATED_ICON from './icon/Unstated.png'
 
 const Container = styled.div`
   padding: 5px;
+  margin: 5px;
   text-align: center;
 `
 

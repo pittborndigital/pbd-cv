@@ -29,10 +29,10 @@ export default {
       employer: 'Mustard Systems Ltd',
       contractRole: true,
       description: [
-        'Greenfield project to build a real-time high-performance sports betting and casino platform.',
-        'Development of interna; tools for the supporting business functions, such as traders and customer service agents.',
-        'Establishment of front-end recruitment processes, and the hiring of a permanent team.',
+        'Led the greenfield project to build a real-time high-performance sports betting and casino platform.',
+        'Development of internal tools for the supporting business functions, such as traders and customer service agents.',
         'Architecture and implementation of continuous integration and auto-deployment pipelines, using GitlabCI',
+        'Establishment of front-end recruitment processes, and the hiring of a permanent team.',
       ],
       location: 'Hammersmith, London',
       technologies: [
@@ -50,9 +50,9 @@ export default {
       from: '2014-11',
       to: '2016-08',
       jobTitle: 'Senior Frontend Developer',
-      employer: 'ElementSuite:HR',
+      employer: 'ElementSuite',
       description: [
-        'Contributed to the development of the suite of enterprise products, including HR, Payroll, Recruitment and Employee Portal modules.',
+        'Contributed to the early-stage development of the company\'s suite of enterprise products, including HR, Payroll, Recruitment and Employee Portal modules.',
         'Functional analysis and technical delivery of client-specific customisations to the core software, in an agency-style environment.',
         'Working with companies such as McDonalds Sweden, McDonalds Ireland, Nandos and Advent International',
       ],
@@ -74,10 +74,9 @@ export default {
       jobTitle: 'Technical Consultant',
       employer: 'Succeed Consultancy Ltd',
       description: [
-        'Working with a variety of customers based in both the UK and abroad.',
-        'Helping large customers to make the most out of their enterprise Oracle software implementations by improving UI and UX, delivering value to large user-bases (up to 300,000 global users).',
+        'Helping customers to make the most out of their enterprise Oracle software implementations by improving UI and UX, delivering value to large user-bases (up to 300,000 global users).',
         'Consultative environment working to define requirements, support and train users and software owners as well as technical delivery.',
-        'Worked with customers including Tesco PLC, Morrisons PLC, HSBC, Standard Chartered Bank and Pret A Manger',
+        'Worked both in the UK and abroad with a range of customers, including Tesco PLC, Morrisons PLC, HSBC, Standard Chartered Bank and Pret A Manger.',
       ],
       location: 'London, India, Leeds, Sheffield',
       technologies: ['javascript', 'html', 'css', 'sql', 'PeopleCode'],

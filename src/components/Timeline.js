@@ -44,7 +44,7 @@ const TimelineItemContainer = styled.div`
   position: relative;
   margin-bottom: 15px;
   min-height: 100px;
-  padding: 0 30px 50px;
+  padding: 0 0 30px 30px;
   ${props => props.active && css`
     ${TimelineIndicator} {
       background-color: coral;
@@ -105,9 +105,8 @@ const TimelineItem = props => (
         ) : (
           <span>Present</span>
         )}
-        <div>
-          <DateRangeLength from={props.from} to={props.to} format="YYYY-MM" displayFormat="y" />
-        </div>
+        {" "}
+        (<DateRangeLength from={props.from} to={props.to} format="YYYY-MM" displayFormat="y" />)
       </TimelineItemSubTitle>
     </TimelineItemTitleContainer>
     <TimelineItemDetail>{props.employer}</TimelineItemDetail>
