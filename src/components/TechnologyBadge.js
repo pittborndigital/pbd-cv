@@ -5,15 +5,19 @@ import ReactIcon from './icon/React'
 import ReduxIcon from './icon/Redux'
 import StylusIcon from './icon/Stylus'
 import JavaScriptIcon from './icon/JavaScript'
+import NodeIcon from './icon/Node'
 import HtmlIcon from './icon/Html'
 import CssIcon from './icon/Css'
 import FirebaseIcon from './icon/Firebase'
 import AngularIcon from './icon/Angular'
+import KnockoutIcon from './icon/Knockout'
 import GatsbyIcon from './icon/Gatsby'
 import JestIcon from './icon/Jest'
 import JQueryIcon from './icon/JQuery'
 import MongoIcon from './icon/Mongo'
 import JenkinsIcon from './icon/Jenkins'
+import CordovaIcon from './icon/Cordova'
+import D3Icon from './icon/D3'
 
 import STYLED_COMPONENTS_ICON from './icon/StyledComponents.png'
 import UNSTATED_ICON from './icon/Unstated.png'
@@ -53,12 +57,16 @@ const iconForTechnology = technology => {
       return <HtmlIcon {...defaultProps} />
     case 'javascript':
       return <JavaScriptIcon {...defaultProps} />
+    case 'node':
+      return <NodeIcon {...defaultProps} />
     case 'css':
       return <CssIcon {...defaultProps} />
     case 'firebase':
       return <FirebaseIcon {...defaultProps} />
     case 'angular':
       return <AngularIcon {...defaultProps} />
+    case 'knockout':
+      return <KnockoutIcon {...defaultProps} width={64} />
     case 'styled-components':
       return <TechLabelImg src={STYLED_COMPONENTS_ICON} {...defaultProps} style={{backgroundColor: 'grey'}} />
     case 'unstated':
@@ -74,6 +82,10 @@ const iconForTechnology = technology => {
       return <MongoIcon {...defaultProps} />
     case 'jenkins':
       return <JenkinsIcon {...defaultProps} />
+    case 'cordova':
+      return <CordovaIcon {...defaultProps} />
+    case 'd3':
+      return <D3Icon {...defaultProps} />
     default:
       return null
   }

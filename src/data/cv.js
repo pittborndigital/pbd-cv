@@ -20,6 +20,7 @@ export default {
       technologies: [
         'react',
         'react-native',
+        'redux',
         'unstated',
         'styled-components',
         'firebase',
@@ -94,7 +95,7 @@ export default {
         'Knowledge transfer with offshore resources, and contribution to technical documentation.',
       ],
       location: 'Farringdon, London',
-      technologies: ['RegExp', 'html', 'javascript', 'sql'],
+      technologies: ['html', 'javascript', 'RegExp', 'sql'],
     },
   ],
   educationHistory: [
@@ -113,6 +114,7 @@ export default {
         'programming',
         'algorithm optimisation',
         'combinatorics',
+        'probability',
       ],
     }
   ]
