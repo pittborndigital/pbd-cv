@@ -1,39 +1,58 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Container = styled.div`
-  position: relative;
-  padding: 30px 130px 30px 30px;
-  min-height: 100px;
+const ProfileText = styled.div``
+const Title = styled.h1`
+  line-height: 1.8em;
+  margin-bottom: 20px;
+`
+const Blurb = styled.p`
+  line-height: 1.7em;
+  margin: 0;
 `
 
-const Title = styled.h1``
-
-const Blurb = styled.p``
-
-const ProfilePicture = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`
-
-const Image = styled.img`
+const ProfilePicture = styled.img`
   border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  margin: 0;
+`
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+
+  ${ProfileText} {
+    padding-right: 50px;
+    @media (max-width: 700px) {
+      padding-right: 0px;
+    }
+  }
+
+  ${ProfilePicture} {
+    @media (max-width: 700px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 `
 
 const Profile = ({ title, blurb, profilePicture }) => (
   <Container>
-    <Title>{title}</Title>
-    <Blurb>{blurb}</Blurb>
-    <ProfilePicture>
-      <Image src={profilePicture} />
-    </ProfilePicture>
+    <ProfileText>
+      <Title>{title}</Title>
+      <Blurb>{blurb}</Blurb>
+    </ProfileText>
+    <ProfilePicture src={profilePicture} />
   </Container>
 )
 

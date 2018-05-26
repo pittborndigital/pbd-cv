@@ -1,7 +1,10 @@
 export default {
   title: 'Pragmatic Innovation',
   blurb:
-    'Creating great user experiences with the stability and longevity of carefully crafted application design.',
+    '\
+    Creating great user experiences with the stability and longevity of carefully crafted application design, without sacrificing on delivery timelines.\
+    Cutting the right corners.\
+    ',
   profilePicture: './ProfilePic.jpg',
   jobHistory: [
     {

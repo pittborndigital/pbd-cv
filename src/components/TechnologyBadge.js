@@ -19,13 +19,13 @@ import STYLED_COMPONENTS_ICON from './icon/StyledComponents.png'
 import UNSTATED_ICON from './icon/Unstated.png'
 
 const Container = styled.div`
-  padding: 5px;
-  margin: 5px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `
 
 const TechLabel = styled.label`
-  display: block;
   text-transform: uppercase;
   font-size: 11px;
 `

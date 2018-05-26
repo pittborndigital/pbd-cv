@@ -5,9 +5,7 @@ import TechnologyBadge from './TechnologyBadge'
 import DateDisplay from './DateDisplay'
 import DateRangeLength from './DateRangeLength'
 
-const Container = styled.div`
-  padding: 30px;
-`
+const Container = styled.div``
 
 const TimelineWrapper = styled.div`
   position: relative;
@@ -52,18 +50,11 @@ const TimelineItemContainer = styled.div`
   `}
 `
 
-const TimelineItemTitleContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: 1rem;
-  font-weight: bold;
-`
-
 const TimelineItemTitle = styled.h3`
   font-size: 1.2em;
   font-weight: bold;
   margin: 0;
+  margin-bottom: 10px;
   text-align: left;
 `
 
@@ -71,7 +62,7 @@ const TimelineItemSubTitle = styled.h5`
   font-size: 0.8em;
   font-weight: normal;
   margin: 0;
-  text-align: right;
+  margin-bottom: 10px;
 `
 
 const TimelineItemDetail = styled.div`
@@ -79,9 +70,17 @@ const TimelineItemDetail = styled.div`
   margin-bottom: 15px;
 `
 
-const TimelineItemDescription = styled.p`
+const TimelineItemDescription = styled.div`
   padding: 10px 0;
   font-size: 1.1em;
+  line-height: 1.5em;
+  @media (max-width: 700px) {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
 `
 
 const TimelineTechnologies = styled.div`
@@ -90,7 +89,39 @@ const TimelineTechnologies = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  & > * {
+    margin: 10px 0;
+    padding: 0;
+    flex-basis: 25%;
+    min-height: 50px;
+  }
+  @media (max-width: 1000px) {
+    justify-content: space-between;
+    & > * {
+      flex-basis: 33.33%;
+    }
+  }
+  @media (max-width: 700px) {
+    justify-content: space-between;
+    & > * {
+      flex-basis: 50%;
+    }
+  }
 `
+
+const TimelineItemTitleContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: bold;
+  @media (max-width: 700px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+`
+
+
 
 const TimelineItem = props => (
   <TimelineItemContainer index={props.index} active={!props.to}>
