@@ -127,23 +127,25 @@ const TimelineItem = props => (
   <TimelineItemContainer index={props.index} active={!props.to}>
     <TimelineIndicator />
     <TimelineItemTitleContainer>
-      <TimelineItemTitle>{props.jobTitle}</TimelineItemTitle>
+      <TimelineItemTitle>{props.title}</TimelineItemTitle>
       <TimelineItemSubTitle>
-        <DateDisplay date={props.from} format="YYYY-MM" displayFormat="MMMM YYYY" />
+        <DateDisplay date={props.from} format={props.dateFormat} displayFormat={props.dateDisplayFormat} />
         <span> to </span>
         {props.to ? (
-          <DateDisplay date={props.to} format="YYYY-MM" displayFormat="MMMM YYYY" />
+          <DateDisplay date={props.to} format={props.dateFormat} displayFormat={props.dateDisplayFormat} />
         ) : (
           <span>Present</span>
         )}
         {" "}
-        (<DateRangeLength from={props.from} to={props.to} format="YYYY-MM" displayFormat="y" />)
+        (<DateRangeLength from={props.from} to={props.to} format={props.dateFormat} displayFormat="y" />)
       </TimelineItemSubTitle>
     </TimelineItemTitleContainer>
-    <TimelineItemDetail>{props.employer}</TimelineItemDetail>
-    <TimelineItemDescription>
-      <ul>{props.description.map(desc => <li>{desc}</li>)}</ul>
-    </TimelineItemDescription>
+    <TimelineItemDetail>{props.subTitle}</TimelineItemDetail>
+    {props.description && (
+      <TimelineItemDescription>
+        <ul>{props.description.map(desc => <li>{desc}</li>)}</ul>
+      </TimelineItemDescription>
+    )}
     <TimelineTechnologies>
       {props.technologies.map(t => <TechnologyBadge key={t} technology={t} />)}
     </TimelineTechnologies>

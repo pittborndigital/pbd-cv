@@ -28,6 +28,7 @@ const Container = styled.div`
 const TechLabel = styled.label`
   text-transform: uppercase;
   font-size: 11px;
+  text-align: center;
 `
 
 const TechLabelImg = styled.img`

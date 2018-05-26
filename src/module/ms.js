@@ -167,7 +167,12 @@ function plural(ms, msAbs, n, name) {
   var isPlural = msAbs >= n;
   var pluralEnd = ' ' + name + (isPlural ? 's' : '')
   if ( n === y ) {
-    return Math.floor(ms / n) + pluralEnd + ', ' + plural(ms%y, msAbs%y, M, 'month');
+    const numMonths = Math.floor(msAbs%y / M)
+    if (numMonths !== 12 && numMonths !== 0) {
+      return Math.floor(ms / n) + pluralEnd + ', ' + plural(ms%y, msAbs%y, M, 'month');
+    } else {
+      return Math.round(ms / n) + pluralEnd;
+    }
   } else {
     return Math.round(ms / n) + pluralEnd;
   }
