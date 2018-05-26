@@ -34,6 +34,7 @@ const Container = styled.div`
 
   ${ProfilePicture} {
     @media (max-width: 700px) {
+      margin-top: 30px;
       margin-bottom: 30px;
     }
   }
