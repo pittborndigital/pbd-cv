@@ -1,7 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 
 import TechnologyBadge from './TechnologyBadge'
+import DateDisplay from './DateDisplay'
+import DateRangeLength from './DateRangeLength'
 
 const Container = styled.div`
   padding: 30px;
@@ -25,13 +27,6 @@ const TimelineItems = styled.div`
   width: 100%;
 `
 
-const TimelineItemContainer = styled.div`
-  position: relative;
-  margin-bottom: 15px;
-  min-height: 100px;
-  padding: 0 30px 50px;
-`
-
 const TimelineIndicator = styled.div`
   position: absolute;
   top: 0;
@@ -43,6 +38,18 @@ const TimelineIndicator = styled.div`
   background-color: white;
   border: 1px solid coral;
   z-index: 3;
+`
+
+const TimelineItemContainer = styled.div`
+  position: relative;
+  margin-bottom: 15px;
+  min-height: 100px;
+  padding: 0 30px 50px;
+  ${props => props.active && css`
+    ${TimelineIndicator} {
+      background-color: coral;
+    }
+  `}
 `
 
 const TimelineItemTitleContainer = styled.div`
@@ -86,12 +93,21 @@ const TimelineTechnologies = styled.div`
 `
 
 const TimelineItem = props => (
-  <TimelineItemContainer index={props.index}>
+  <TimelineItemContainer index={props.index} active={!props.to}>
     <TimelineIndicator />
     <TimelineItemTitleContainer>
       <TimelineItemTitle>{props.jobTitle}</TimelineItemTitle>
       <TimelineItemSubTitle>
-        <span>{props.from}</span> to <span>{props.to}</span>
+        <DateDisplay date={props.from} format="YYYY-MM" displayFormat="MMMM YYYY" />
+        <span> to </span>
+        {props.to ? (
+          <DateDisplay date={props.to} format="YYYY-MM" displayFormat="MMMM YYYY" />
+        ) : (
+          <span>Present</span>
+        )}
+        <div>
+          <DateRangeLength from={props.from} to={props.to} format="YYYY-MM" displayFormat="y" />
+        </div>
       </TimelineItemSubTitle>
     </TimelineItemTitleContainer>
     <TimelineItemDetail>{props.employer}</TimelineItemDetail>

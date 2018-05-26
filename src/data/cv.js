@@ -5,8 +5,7 @@ export default {
   profilePicture: './ProfilePic.jpg',
   jobHistory: [
     {
-      from: 'October 2017',
-      to: 'Present',
+      from: '2017-10',
       jobTitle: 'Business Owner',
       employer: 'Pitt Born Digital Ltd',
       description: [
@@ -25,8 +24,7 @@ export default {
       ],
     },
     {
-      from: 'September 2016',
-      to: 'Present',
+      from: '2016-09',
       jobTitle: 'Frontend Lead',
       employer: 'Mustard Systems Ltd',
       contractRole: true,
@@ -49,8 +47,8 @@ export default {
       ],
     },
     {
-      from: 'November 2014',
-      to: 'August 2016',
+      from: '2014-11',
+      to: '2016-08',
       jobTitle: 'Senior Frontend Developer',
       employer: 'ElementSuite:HR',
       description: [
@@ -71,8 +69,8 @@ export default {
       ],
     },
     {
-      from: 'April 2012',
-      to: 'November 2014',
+      from: '2012-04',
+      to: '2014-11',
       jobTitle: 'Technical Consultant',
       employer: 'Succeed Consultancy Ltd',
       description: [
@@ -85,8 +83,8 @@ export default {
       technologies: ['javascript', 'html', 'css', 'sql', 'PeopleCode'],
     },
     {
-      from: 'August 2011',
-      to: 'March 2012',
+      from: '2011-08',
+      to: '2012-03',
       jobTitle: 'Software Developer',
       employer: 'Moreover Technologies Ltd',
       description: [
