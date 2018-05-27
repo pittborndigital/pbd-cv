@@ -18,6 +18,9 @@ import MongoIcon from './icon/Mongo'
 import JenkinsIcon from './icon/Jenkins'
 import CordovaIcon from './icon/Cordova'
 import D3Icon from './icon/D3'
+import DatabaseIcon from './icon/Database'
+import PlugIcon from './icon/Plug'
+import BracketsIcon from './icon/Brackets'
 
 import STYLED_COMPONENTS_ICON from './icon/StyledComponents.png'
 import UNSTATED_ICON from './icon/Unstated.png'
@@ -86,6 +89,12 @@ const iconForTechnology = technology => {
       return <CordovaIcon {...defaultProps} />
     case 'd3':
       return <D3Icon {...defaultProps} />
+    case 'sql':
+      return <DatabaseIcon {...defaultProps} />
+    case 'websockets':
+      return <PlugIcon {...defaultProps} />
+    case 'regexp':
+      return <BracketsIcon {...defaultProps} />
     default:
       return null
   }

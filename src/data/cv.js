@@ -44,7 +44,7 @@ export default {
         'stylus',
         'unstated',
         'jest',
-        'WebSockets',
+        'websockets',
         'node',
       ],
     },
@@ -81,7 +81,7 @@ export default {
         'Worked both in the UK and abroad with a range of customers, including Tesco PLC, Morrisons PLC, HSBC, Standard Chartered Bank and Pret A Manger.',
       ],
       location: 'London, India, Leeds, Sheffield',
-      technologies: ['javascript', 'html', 'css', 'sql', 'PeopleCode'],
+      technologies: ['javascript', 'html', 'css', 'sql'],
     },
     {
       from: '2011-08',
@@ -93,7 +93,12 @@ export default {
         'Knowledge transfer with offshore resources, and contribution to technical documentation.',
       ],
       location: 'Farringdon, London',
-      technologies: ['html', 'javascript', 'RegExp', 'sql'],
+      technologies: [
+        'html',
+        'javascript',
+        'regexp',
+        'sql'
+      ],
     },
   ],
   educationHistory: [
