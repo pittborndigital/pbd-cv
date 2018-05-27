@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, {css} from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import TechnologyBadge from './TechnologyBadge'
 import DateDisplay from './DateDisplay'
@@ -43,11 +43,18 @@ const TimelineItemContainer = styled.div`
   margin-bottom: 15px;
   min-height: 100px;
   padding: 0 0 30px 30px;
-  ${props => props.active && css`
-    ${TimelineIndicator} {
-      background-color: coral;
+  ${props =>
+    props.active &&
+    css`
+      ${TimelineIndicator} {
+        background-color: coral;
+      }
+    `}
+    
+    @media print {
+      page-break-inside: avoid;
     }
-  `}
+  }
 `
 
 const TimelineItemTitle = styled.h3`
@@ -121,23 +128,33 @@ const TimelineItemTitleContainer = styled.div`
   }
 `
 
-
-
 const TimelineItem = props => (
   <TimelineItemContainer index={props.index} active={!props.to}>
     <TimelineIndicator />
     <TimelineItemTitleContainer>
       <TimelineItemTitle>{props.title}</TimelineItemTitle>
       <TimelineItemSubTitle>
-        <DateDisplay date={props.from} format={props.dateFormat} displayFormat={props.dateDisplayFormat} />
+        <DateDisplay
+          date={props.from}
+          format={props.dateFormat}
+          displayFormat={props.dateDisplayFormat}
+        />
         <span> to </span>
         {props.to ? (
-          <DateDisplay date={props.to} format={props.dateFormat} displayFormat={props.dateDisplayFormat} />
+          <DateDisplay
+            date={props.to}
+            format={props.dateFormat}
+            displayFormat={props.dateDisplayFormat}
+          />
         ) : (
           <span>Present</span>
-        )}
-        {" "}
-        (<DateRangeLength from={props.from} to={props.to} format={props.dateFormat} displayFormat="y" />)
+        )}{' '}
+        (<DateRangeLength
+          from={props.from}
+          to={props.to}
+          format={props.dateFormat}
+          displayFormat="y"
+        />)
       </TimelineItemSubTitle>
     </TimelineItemTitleContainer>
     <TimelineItemDetail>{props.subTitle}</TimelineItemDetail>

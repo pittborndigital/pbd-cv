@@ -6,6 +6,10 @@ const Wrapper = styled.div`
   @media (max-width: 700px) {
     padding: 20px;
   }
+  @page {
+    size: A4 portrait;
+    margin: 20mm 10mm 20mm 10mm;
+  }
 `
 
 const PageWrapper = ({ children }) => <Wrapper>{children}</Wrapper>
