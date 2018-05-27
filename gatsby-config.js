@@ -3,6 +3,7 @@ module.exports = {
     title: 'CV - Christopher Pitt',
     lastUpdated: '2018-05-25',
   },
+  pathPrefix: "/pbd-cv",
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
