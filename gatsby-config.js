@@ -3,15 +3,15 @@ module.exports = {
     title: 'CV - Christopher Pitt',
     lastUpdated: '2018-05-25',
   },
-  pathPrefix: "/pbd-cv",
+  pathPrefix: '/pbd-cv',
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: `gatsby-plugin-favicon`,
+      resolve: 'gatsby-plugin-favicon',
       options: {
-        logo: "./src/assets/favicon.svg",
+        logo: './src/assets/favicon.svg',
         injectHTML: true,
         icons: {
           android: true,
@@ -22,9 +22,10 @@ module.exports = {
           firefox: true,
           twitter: false,
           yandex: false,
-          windows: false
-        }
-      }
-    }
+          windows: false,
+        },
+      },
+    },
+    'gatsby-plugin-styled-components',
   ],
 }

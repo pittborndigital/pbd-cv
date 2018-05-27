@@ -12,11 +12,16 @@ const Blurb = styled.p`
   font-size: 1.3em;
 `
 
-const ProfilePicture = styled.img`
-  border-radius: 50%;
+const ProfilePictureContainer = styled.div`
   height: 150px;
   width: 150px;
+`
+const ProfilePicture = styled.img`
+  height: 150px;
+  width: 150px;
+  max-width: initial;
   margin: 0;
+  border-radius: 50%;
 `
 
 const Container = styled.div`
@@ -33,7 +38,7 @@ const Container = styled.div`
     }
   }
 
-  ${ProfilePicture} {
+  ${ProfilePictureContainer} {
     @media (max-width: 700px) {
       margin-top: 30px;
       margin-bottom: 30px;
@@ -54,7 +59,9 @@ const Profile = ({ title, blurb, profilePicture }) => (
       <Title>{title}</Title>
       <Blurb>{blurb}</Blurb>
     </ProfileText>
-    <ProfilePicture src={profilePicture} />
+    <ProfilePictureContainer>
+      <ProfilePicture src={profilePicture} />
+    </ProfilePictureContainer>
   </Container>
 )
 
