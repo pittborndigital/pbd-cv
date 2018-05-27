@@ -1,7 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import { injectGlobal } from 'styled-components'
+
 import './index.css'
+
+injectGlobal`
+  body {
+    display: block; !important
+  }
+`
 
 const Layout = ({ children, data }) => {
   return (
@@ -9,8 +17,17 @@ const Layout = ({ children, data }) => {
       <Helmet
         title={data.site.siteMetadata.title}
         meta={[
-          { name: 'description', content: `Christopher Pitt - CV ${data.site.siteMetadata.lastUpdated}` },
-          { name: 'keywords', content: 'JavaScript, React, React-Native, Developer, Software, Web, WebDevelopment, ' },
+          {
+            name: 'description',
+            content: `Christopher Pitt - CV ${
+              data.site.siteMetadata.lastUpdated
+            }`,
+          },
+          {
+            name: 'keywords',
+            content:
+              'JavaScript, React, React-Native, Developer, Software, Web, WebDevelopment, ',
+          },
         ]}
       />
       <div
