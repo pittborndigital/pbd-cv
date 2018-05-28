@@ -37,17 +37,23 @@ const redirect = ({ location, history }) => {
   }
 }
 
-export default () => {
+export default ({ data }) => {
+  // handle SPA redirects from 404 page
   if (typeof window === 'object') redirect(window)
 
   const timeline = [
-    ...cvData.jobHistory.map(history => {
+    ...data.allMarkdownRemark.edges.map(history => {
+      const { html, frontmatter } = history.node
+      const { title, employer, from, to, technologies } = frontmatter
       return {
-        ...history,
-        title: history.jobTitle,
-        subTitle: history.employer,
+        title,
+        subtitle: employer,
+        from,
+        to,
+        technologies,
         dateFormat: 'YYYY-MM',
         dateDisplayFormat: 'MMMM YYYY',
+        description: html,
       }
     }),
     ...cvData.educationHistory.map(history => {
@@ -74,3 +80,27 @@ export default () => {
     </PageWrapper>
   )
 }
+
+export const query = graphql`
+  query CVDataQuery {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___from]},
+      filter: {fileAbsolutePath: {regex: "/(job)/.*\\.md$/"}}
+    ) {
+      totalCount,
+      edges {
+        node {
+          html,
+          frontmatter {
+            from,
+            to,
+            title,
+            employer,
+            technologies,
+            location,
+          }
+        }
+      }
+    }
+  }
+`

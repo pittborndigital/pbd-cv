@@ -158,7 +158,12 @@ const TimelineItem = props => (
       </TimelineItemSubTitle>
     </TimelineItemTitleContainer>
     <TimelineItemDetail>{props.subTitle}</TimelineItemDetail>
-    {props.description && (
+    {typeof props.description === 'string' && (
+      <TimelineItemDescription
+        dangerouslySetInnerHTML={{ __html: props.description }}
+      />
+    )}
+    {typeof props.description === 'object' && (
       <TimelineItemDescription>
         <ul>{props.description.map(desc => <li>{desc}</li>)}</ul>
       </TimelineItemDescription>

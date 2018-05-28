@@ -27,5 +27,13 @@ module.exports = {
       },
     },
     'gatsby-plugin-styled-components',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/data`,
+        name: 'md-data',
+      },
+    },
+    'gatsby-transformer-remark',
   ],
 }
