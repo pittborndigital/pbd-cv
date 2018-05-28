@@ -5,11 +5,11 @@ import MailIcon from './icon/Mail'
 
 const ProfileText = styled.div``
 const Title = styled.h1`
-  line-height: 1.8em;
-  margin-bottom: 40px;
+  line-height: 1.6em;
+  margin-bottom: 30px;
 `
 const Blurb = styled.div`
-  line-height: 1.7em;
+  line-height: 1.6em;
   margin: 0;
   font-size: 1.3em;
 `
@@ -33,7 +33,7 @@ const ProfilePrimaryContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   ${ProfileText} {
     padding-right: 50px;

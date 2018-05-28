@@ -36,6 +36,12 @@ const TimelineIndicator = styled.div`
   background-color: white;
   border: 1px solid coral;
   z-index: 3;
+
+  @media only screen and (max-width: 700px) {
+    height: 20px;
+    width: 20px;
+    left: -10px;
+  }
 `
 
 const TimelineItemContainer = styled.div`
@@ -55,6 +61,9 @@ const TimelineItemContainer = styled.div`
       page-break-inside: avoid;
       margin-bottom: 75px;
     }
+  }
+  @media only screen and (max-width: 700px) {
+    padding-left: 20px;
   }
 `
 
@@ -83,6 +92,7 @@ const TimelineItemDescription = styled.div`
   font-size: 1.1em;
   line-height: 1.5em;
   @media only screen and (max-width: 700px) {
+    font-size: 1em;
     ul {
       list-style-type: none;
       padding: 0;

@@ -71,7 +71,13 @@ const iconForTechnology = technology => {
     case 'knockout':
       return <KnockoutIcon {...defaultProps} width={64} />
     case 'styled-components':
-      return <TechLabelImg src={STYLED_COMPONENTS_ICON} {...defaultProps} width={64} />
+      return (
+        <TechLabelImg
+          src={STYLED_COMPONENTS_ICON}
+          {...defaultProps}
+          width={64}
+        />
+      )
     case 'unstated':
       return <TechLabelImg src={UNSTATED_ICON} {...defaultProps} width={64} />
     case 'gatsby':
