@@ -6,8 +6,6 @@ module.exports = {
   pathPrefix: '/pbd-cv',
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-plugin-favicon',
       options: {
