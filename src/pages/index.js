@@ -64,13 +64,21 @@ export default ({ data }) => {
     }),
   ]
 
+  const {
+    title,
+    profilePicture,
+    contactEmail,
+    github,
+  } = data.cvData.frontmatter
+
   return (
     <PageWrapper>
       <Profile
-        title={data.cvData.frontmatter.title}
+        title={title}
         blurb={<p dangerouslySetInnerHTML={{ __html: data.cvData.html }} />}
-        profilePicture={data.cvData.frontmatter.profilePicture.publicURL}
-        email={data.cvData.frontmatter.contactEmail}
+        profilePicture={profilePicture.publicURL}
+        email={contactEmail}
+        github={github}
       />
       <PageDivider />
       <Timeline items={timeline} />
@@ -87,6 +95,7 @@ export const query = graphql`
       frontmatter {
         title,
         contactEmail,
+        github,
         profilePicture {
           publicURL,
         }
