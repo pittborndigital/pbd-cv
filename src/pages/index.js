@@ -4,6 +4,7 @@ import PageWrapper from '../components/PageWrapper'
 import Profile from '../components/Profile'
 import Timeline from '../components/Timeline'
 import PageDivider from '../components/PageDivider'
+import GithubCorner from '../components/GithubCorner'
 
 const redirect = ({ location, history }) => {
   if (location.search) {
@@ -73,6 +74,7 @@ export default ({ data }) => {
 
   return (
     <PageWrapper>
+      <GithubCorner url="https://github.com/pittborndigital/pbd-cv" />
       <Profile
         title={title}
         blurb={<p dangerouslySetInnerHTML={{ __html: data.cvData.html }} />}
