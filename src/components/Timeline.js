@@ -88,8 +88,9 @@ const TimelineTechnologies = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+
   & > * {
     margin: 10px 0;
     padding: 0;
@@ -97,13 +98,11 @@ const TimelineTechnologies = styled.div`
     min-height: 50px;
   }
   @media only screen and (max-width: 1000px) {
-    justify-content: space-between;
     & > * {
       flex-basis: 33.33%;
     }
   }
   @media only screen and (max-width: 700px) {
-    justify-content: space-between;
     & > * {
       flex-basis: 50%;
     }
