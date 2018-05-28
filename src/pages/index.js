@@ -41,8 +41,10 @@ export default ({ data }) => {
   // handle SPA redirects from 404 page
   if (typeof window === 'object') redirect(window)
 
+  console.log(data)
+
   const timeline = [
-    ...data.allMarkdownRemark.edges.map(history => {
+    ...data.job.edges.map(history => {
       const { html, frontmatter } = history.node
       const { title, employer, from, to, technologies } = frontmatter
       return {
@@ -56,11 +58,15 @@ export default ({ data }) => {
         description: html,
       }
     }),
-    ...cvData.educationHistory.map(history => {
+    ...data.education.edges.map(history => {
+      const { frontmatter } = history.node
+      const { institution, course, grade, from, to, technologies } = frontmatter
       return {
-        ...history,
-        title: `${history.course} - ${history.grade}`,
-        subTitle: history.institution,
+        title: `${course} - ${grade}`,
+        subTitle: institution,
+        from,
+        to,
+        technologies,
         dateFormat: 'YYYY',
         dateDisplayFormat: 'YYYY',
       }
@@ -83,7 +89,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query CVDataQuery {
-    allMarkdownRemark(
+    job: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___from]},
       filter: {fileAbsolutePath: {regex: "/(job)/.*\\.md$/"}}
     ) {
@@ -96,6 +102,26 @@ export const query = graphql`
             to,
             title,
             employer,
+            technologies,
+            location,
+          }
+        }
+      }
+    },
+    education: allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___from]},
+      filter: {fileAbsolutePath: {regex: "/(education)/.*\\.md$/"}}
+    ) {
+      totalCount,
+      edges {
+        node {
+          html,
+          frontmatter {
+            from,
+            to,
+            institution,
+            course,
+            grade,
             technologies,
             location,
           }
