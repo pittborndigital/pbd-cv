@@ -4,4 +4,4 @@ profilePicture: "./ProfilePic2.jpg"
 contactEmail: "chris@pittborndigital.com"
 ---
 
-Cutting the right corners to deliver high quality user experiences without sacrificing stability and longevity.
+Helping customers to build high quality user experiences without sacrificing the stability and longevity of their application.
