@@ -67,30 +67,13 @@ const TimelineItemContainer = styled.div`
   }
 `
 
-const TimelineItemTitle = styled.h3`
-  font-size: 1.2em;
-  font-weight: bold;
-  margin: 0;
-  margin-bottom: 10px;
-  text-align: left;
-`
-
-const TimelineItemSubTitle = styled.h5`
-  font-size: 0.8em;
-  font-weight: normal;
-  margin: 0;
-  margin-bottom: 10px;
-`
-
-const TimelineItemDetail = styled.div`
-  font-size: 1em;
-  margin-bottom: 15px;
-`
-
 const TimelineItemDescription = styled.div`
   padding: 10px 0;
   font-size: 1.1em;
   line-height: 1.5em;
+  p {
+    margin-bottom: 15px;
+  }
   @media only screen and (max-width: 700px) {
     font-size: 1em;
     ul {
@@ -127,24 +110,53 @@ const TimelineTechnologies = styled.div`
   }
 `
 
-const TimelineItemTitleContainer = styled.div`
+const TimelineTitleContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 1rem;
-  font-weight: bold;
+  align-items: flex-start;
+  margin-bottom: 15px;
   @media only screen and (max-width: 700px) {
     flex-direction: column;
     justify-content: flex-start;
   }
 `
 
+const TimelineItemTitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: bold;
+`
+
+const TimelineItemTitle = styled.h3`
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: left;
+`
+
+const TimelineItemSubTitle = styled.h5`
+  font-size: 0.8em;
+  margin: 0;
+  margin-bottom: 10px;
+`
+
+const TimelineItemTitleDetail = styled.div`
+  font-size: 1em;
+`
+
 const TimelineItem = props => (
   <TimelineItemContainer index={props.index} active={!props.to}>
     <TimelineIndicator />
-    <TimelineItemTitleContainer>
-      <TimelineItemTitle>{props.title}</TimelineItemTitle>
-      <TimelineItemSubTitle>
+    <TimelineTitleContainer>
+      <TimelineItemTitleWrapper>
+        <TimelineItemTitle>{props.title}</TimelineItemTitle>
+        <TimelineItemSubTitle>{props.subTitle}</TimelineItemSubTitle>
+      </TimelineItemTitleWrapper>
+      <TimelineItemTitleDetail>
         <DateDisplay
           date={props.from}
           format={props.dateFormat}
@@ -166,9 +178,8 @@ const TimelineItem = props => (
           format={props.dateFormat}
           displayFormat="y"
         />)
-      </TimelineItemSubTitle>
-    </TimelineItemTitleContainer>
-    <TimelineItemDetail>{props.subTitle}</TimelineItemDetail>
+      </TimelineItemTitleDetail>
+    </TimelineTitleContainer>
     {typeof props.description === 'string' && (
       <TimelineItemDescription
         dangerouslySetInnerHTML={{ __html: props.description }}
