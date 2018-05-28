@@ -41,8 +41,6 @@ export default ({ data }) => {
   // handle SPA redirects from 404 page
   if (typeof window === 'object') redirect(window)
 
-  console.log(data)
-
   const timeline = [
     ...data.job.edges.map(history => {
       const { html, frontmatter } = history.node
