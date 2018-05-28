@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import cvData from '../data/cv'
 import PageWrapper from '../components/PageWrapper'
 import Profile from '../components/Profile'
 import Timeline from '../components/Timeline'
@@ -75,9 +74,9 @@ export default ({ data }) => {
     <PageWrapper>
       <ProfileContainer>
         <Profile
-          title={cvData.title}
-          blurb={cvData.blurb}
-          profilePicture={cvData.profilePicture}
+          title={data.cvData.frontmatter.title}
+          blurb={<p dangerouslySetInnerHTML={{ __html: data.cvData.html }} />}
+          profilePicture={data.cvData.frontmatter.profilePicture.publicURL}
         />
       </ProfileContainer>
       <Timeline items={timeline} />
@@ -87,6 +86,17 @@ export default ({ data }) => {
 
 export const query = graphql`
   query CVDataQuery {
+    cvData: markdownRemark(
+      fileAbsolutePath: {regex: "/cv.md$/"}
+    ) {
+      html,
+      frontmatter {
+        title,
+        profilePicture {
+          publicURL,
+        }
+      }
+    },
     job: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___from]},
       filter: {fileAbsolutePath: {regex: "/(job)/.*\\.md$/"}}
