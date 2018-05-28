@@ -40,7 +40,7 @@ export default ({ data }) => {
       const { title, employer, from, to, technologies } = frontmatter
       return {
         title,
-        subtitle: employer,
+        subTitle: employer,
         from,
         to,
         technologies,
