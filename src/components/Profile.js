@@ -33,19 +33,19 @@ const Container = styled.div`
 
   ${ProfileText} {
     padding-right: 50px;
-    @media (max-width: 700px) {
+    @media only screen and (max-width: 700px) {
       padding-right: 0px;
     }
   }
 
   ${ProfilePictureContainer} {
-    @media (max-width: 700px) {
+    @media only screen and (max-width: 700px) {
       margin-top: 30px;
       margin-bottom: 30px;
     }
   }
 
-  @media (max-width: 700px) {
+  @media only screen and (max-width: 700px) {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;

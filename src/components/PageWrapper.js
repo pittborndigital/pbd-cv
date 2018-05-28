@@ -10,6 +10,9 @@ const Wrapper = styled.div`
     size: A4 portrait;
     margin: 20mm 10mm 20mm 10mm;
   }
+  @media only print {
+    padding: 0;
+  }
 `
 
 const PageWrapper = ({ children }) => <Wrapper>{children}</Wrapper>

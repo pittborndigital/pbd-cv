@@ -625,3 +625,10 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+@media only print {
+  body {
+    zoom: 75%;
+    margin: 15mm;
+  }
+}

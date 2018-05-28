@@ -1,15 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import PageWrapper from '../components/PageWrapper'
 import Profile from '../components/Profile'
 import Timeline from '../components/Timeline'
-
-const ProfileContainer = styled.div`
-  @media print {
-    page-break-after: always;
-  }
-`
 
 const redirect = ({ location, history }) => {
   if (location.search) {
@@ -72,13 +65,11 @@ export default ({ data }) => {
 
   return (
     <PageWrapper>
-      <ProfileContainer>
-        <Profile
-          title={data.cvData.frontmatter.title}
-          blurb={<p dangerouslySetInnerHTML={{ __html: data.cvData.html }} />}
-          profilePicture={data.cvData.frontmatter.profilePicture.publicURL}
-        />
-      </ProfileContainer>
+      <Profile
+        title={data.cvData.frontmatter.title}
+        blurb={<p dangerouslySetInnerHTML={{ __html: data.cvData.html }} />}
+        profilePicture={data.cvData.frontmatter.profilePicture.publicURL}
+      />
       <Timeline items={timeline} />
     </PageWrapper>
   )

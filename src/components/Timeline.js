@@ -51,8 +51,9 @@ const TimelineItemContainer = styled.div`
       }
     `}
     
-    @media print {
+    @media only print {
       page-break-inside: avoid;
+      margin-bottom: 75px;
     }
   }
 `
@@ -81,7 +82,7 @@ const TimelineItemDescription = styled.div`
   padding: 10px 0;
   font-size: 1.1em;
   line-height: 1.5em;
-  @media (max-width: 700px) {
+  @media only screen and (max-width: 700px) {
     ul {
       list-style-type: none;
       padding: 0;
@@ -102,13 +103,13 @@ const TimelineTechnologies = styled.div`
     flex-basis: 25%;
     min-height: 50px;
   }
-  @media (max-width: 1000px) {
+  @media only screen and (max-width: 1000px) {
     justify-content: space-between;
     & > * {
       flex-basis: 33.33%;
     }
   }
-  @media (max-width: 700px) {
+  @media only screen and (max-width: 700px) {
     justify-content: space-between;
     & > * {
       flex-basis: 50%;
@@ -122,7 +123,7 @@ const TimelineItemTitleContainer = styled.div`
   justify-content: space-between;
   font-size: 1rem;
   font-weight: bold;
-  @media (max-width: 700px) {
+  @media only screen and (max-width: 700px) {
     flex-direction: column;
     justify-content: flex-start;
   }
