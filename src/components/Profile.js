@@ -8,7 +8,7 @@ const Title = styled.h1`
   line-height: 1.8em;
   margin-bottom: 40px;
 `
-const Blurb = styled.p`
+const Blurb = styled.div`
   line-height: 1.7em;
   margin: 0;
   font-size: 1.3em;
