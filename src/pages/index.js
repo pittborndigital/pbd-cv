@@ -69,6 +69,7 @@ export default ({ data }) => {
         title={data.cvData.frontmatter.title}
         blurb={<p dangerouslySetInnerHTML={{ __html: data.cvData.html }} />}
         profilePicture={data.cvData.frontmatter.profilePicture.publicURL}
+        email={data.cvData.frontmatter.contactEmail}
       />
       <Timeline items={timeline} />
     </PageWrapper>
@@ -83,6 +84,7 @@ export const query = graphql`
       html,
       frontmatter {
         title,
+        contactEmail,
         profilePicture {
           publicURL,
         }
