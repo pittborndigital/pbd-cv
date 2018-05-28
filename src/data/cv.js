@@ -1,9 +1,13 @@
+// import PROFILE_PICTURE from './ProfilePic.jpg'
+import PROFILE_PICTURE from './ProfilePic2.jpg'
+
 export default {
   title: 'Responsible Innovation',
-  blurb: '\
+  blurb:
+    '\
     Cutting the right corners to deliver high quality user experiences without sacrificing stability and longevity.\
   ',
-  profilePicture: './ProfilePic.jpg',
+  profilePicture: PROFILE_PICTURE,
   jobHistory: [
     {
       from: '2017-10',
@@ -54,7 +58,7 @@ export default {
       jobTitle: 'Senior Frontend Developer',
       employer: 'ElementSuite',
       description: [
-        'Contributed to the early-stage development of the company\'s suite of enterprise products, including HR, Payroll, Recruitment and Employee Portal modules.',
+        "Contributed to the early-stage development of the company's suite of enterprise products, including HR, Payroll, Recruitment and Employee Portal modules.",
         'Functional analysis and technical delivery of client-specific customisations to the core software, in an agency-style environment.',
         'Working with companies such as McDonalds Sweden, McDonalds Ireland, Nandos and Advent International',
       ],
@@ -93,12 +97,7 @@ export default {
         'Knowledge transfer with offshore resources, and contribution to technical documentation.',
       ],
       location: 'Farringdon, London',
-      technologies: [
-        'html',
-        'javascript',
-        'regexp',
-        'sql'
-      ],
+      technologies: ['html', 'javascript', 'regexp', 'sql'],
     },
   ],
   educationHistory: [
@@ -119,6 +118,6 @@ export default {
         'combinatorics',
         'probability',
       ],
-    }
-  ]
+    },
+  ],
 }
