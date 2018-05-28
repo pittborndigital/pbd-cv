@@ -3,6 +3,7 @@ import React from 'react'
 import PageWrapper from '../components/PageWrapper'
 import Profile from '../components/Profile'
 import Timeline from '../components/Timeline'
+import PageDivider from '../components/PageDivider'
 
 const redirect = ({ location, history }) => {
   if (location.search) {
@@ -71,6 +72,7 @@ export default ({ data }) => {
         profilePicture={data.cvData.frontmatter.profilePicture.publicURL}
         email={data.cvData.frontmatter.contactEmail}
       />
+      <PageDivider />
       <Timeline items={timeline} />
     </PageWrapper>
   )

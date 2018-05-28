@@ -14,9 +14,7 @@ const Blurb = styled.p`
   font-size: 1.3em;
 `
 
-const Container = styled.div`
-  margin-bottom: 80px;
-`
+const Container = styled.div``
 
 const ProfilePictureContainer = styled.div`
   height: 150px;
