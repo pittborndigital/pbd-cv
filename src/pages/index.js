@@ -5,35 +5,11 @@ import PageDivider from '../components/common/PageDivider'
 import GithubCorner from '../components/common/GithubCorner'
 import Profile from '../components/Profile'
 import Timeline from '../components/Timeline'
-
-const redirect = ({ location, history }) => {
-  if (location.search) {
-    const q = {}
-    location.search
-      .slice(1)
-      .split('&')
-      .forEach(v => {
-        const a = v.split('=')
-        q[a[0]] = a
-          .slice(1)
-          .join('=')
-          .replace(/~and~/g, '&')
-      })
-    if (q.p !== undefined) {
-      history.replaceState(
-        null,
-        null,
-        `${location.pathname.slice(0, -1)}${q.p || ''}${q.q ? `?${q.q}` : ''}${
-          location.hash
-        }`,
-      )
-    }
-  }
-}
+import { handleGHPagesRedirect } from '../module/routing'
 
 export default ({ data }) => {
   // handle SPA redirects from 404 page
-  if (typeof window === 'object') redirect(window)
+  if (typeof window === 'object') handleGHPagesRedirect(window)
 
   const timeline = [
     ...data.job.edges.map(history => {
