@@ -15,9 +15,9 @@ import {
   TimelineItemDescription,
   TimelineTechnologies,
 } from './styled'
-import TechnologyBadge from '../TechnologyBadge'
-import DateDisplay from '../DateDisplay'
-import DateRangeLength from '../DateRangeLength'
+import TechnologyBadge from '../common/TechnologyBadge'
+import DateDisplay from '../common/DateDisplay'
+import DateRangeLength from '../common/DateRangeLength'
 
 const TimelineItem = props => (
   <TimelineItemContainer index={props.index} active={!props.to}>

@@ -1,10 +1,10 @@
 import React from 'react'
 
-import PageWrapper from '../components/PageWrapper'
+import PageWrapper from '../components/common/PageWrapper'
+import PageDivider from '../components/common/PageDivider'
+import GithubCorner from '../components/common/GithubCorner'
 import Profile from '../components/Profile'
 import Timeline from '../components/Timeline'
-import PageDivider from '../components/PageDivider'
-import GithubCorner from '../components/GithubCorner'
 
 const redirect = ({ location, history }) => {
   if (location.search) {

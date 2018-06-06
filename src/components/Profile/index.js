@@ -12,8 +12,8 @@ import {
   ContactItem,
   ContactText,
 } from './styled'
-import GithubIcon from '../icon/Github'
-import MailIcon from '../icon/Mail'
+import GithubIcon from '../common/icon/Github'
+import MailIcon from '../common/icon/Mail'
 
 const ProfileSummary = ({ title, blurb, profilePicture }) => (
   <ProfilePrimaryContainer>
