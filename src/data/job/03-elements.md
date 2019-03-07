@@ -1,7 +1,7 @@
 ---
 from: "2014-11"
 to: "2016-08"
-title: "Senior Frontend Developer"
+title: "Frontend Developer"
 employer: "ElementSuite Ltd."
 location: "London, Sweden, Ireland"
 technologies: ['knockout', 'angular', 'jquery', 'jquery-mobile', 'cordova', 'd3', 'mongo', 'jenkins']

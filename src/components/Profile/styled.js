@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
 export const Container = styled.div``
-
 export const ProfileText = styled.div``
+export const ProfileQuickDescription = styled.small``
 
 export const Title = styled.h1`
   line-height: 1.6em;

@@ -1,7 +1,7 @@
 ---
 from: "2016-09"
-to: ""
-title: "Frontend Lead"
+to: "2018-06"
+title: "Frontend Developer"
 employer: "Mustard Systems Ltd."
 location: "Hammersmith, London"
 technologies: ["react", "react-native", "redux", "stylus", "unstated", "jest", "websockets", "node"]

@@ -21,6 +21,7 @@ import D3Icon from './icon/D3'
 import DatabaseIcon from './icon/Database'
 import PlugIcon from './icon/Plug'
 import BracketsIcon from './icon/Brackets'
+import AppiumIcon from './icon/Appium'
 
 import STYLED_COMPONENTS_ICON from './icon/StyledComponents.png'
 import UNSTATED_ICON from './icon/Unstated.png'
@@ -101,6 +102,8 @@ const iconForTechnology = technology => {
       return <PlugIcon {...defaultProps} />
     case 'regexp':
       return <BracketsIcon {...defaultProps} />
+    case 'appium':
+      return <AppiumIcon {...defaultProps} />
     default:
       return null
   }

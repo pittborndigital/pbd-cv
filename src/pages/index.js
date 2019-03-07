@@ -46,6 +46,7 @@ export default ({ data }) => {
     profilePicture,
     contactEmail,
     github,
+    quickDescription,
   } = data.cvData.frontmatter
 
   return (
@@ -54,6 +55,7 @@ export default ({ data }) => {
       <Profile
         title={title}
         blurb={<p dangerouslySetInnerHTML={{ __html: data.cvData.html }} />}
+        quickDescription={quickDescription}
         profilePicture={profilePicture.publicURL}
         email={contactEmail}
         github={github}
@@ -76,7 +78,8 @@ export const query = graphql`
         github,
         profilePicture {
           publicURL,
-        }
+        },
+        quickDescription
       }
     },
     job: allMarkdownRemark(

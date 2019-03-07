@@ -4,6 +4,7 @@ import {
   Container,
   ProfilePrimaryContainer,
   ProfileText,
+  ProfileQuickDescription,
   Title,
   Blurb,
   ProfilePictureContainer,
@@ -15,11 +16,14 @@ import {
 import GithubIcon from '../common/icon/Github'
 import MailIcon from '../common/icon/Mail'
 
-const ProfileSummary = ({ title, blurb, profilePicture }) => (
+const ProfileSummary = ({ title, blurb, profilePicture, quickDescription }) => (
   <ProfilePrimaryContainer>
     <ProfileText>
       <Title>{title}</Title>
       <Blurb>{blurb}</Blurb>
+      {!!quickDescription && (
+        <ProfileQuickDescription>{quickDescription}</ProfileQuickDescription>
+      )}
     </ProfileText>
     <ProfilePictureContainer>
       <ProfilePicture src={profilePicture} />
@@ -40,12 +44,20 @@ const ContactMe = ({ email, github }) => (
   </ContactDetails>
 )
 
-const Profile = ({ title, blurb, profilePicture, email, github }) => (
+const Profile = ({
+  title,
+  blurb,
+  profilePicture,
+  email,
+  github,
+  quickDescription,
+}) => (
   <Container>
     <ProfileSummary
       title={title}
       blurb={blurb}
       profilePicture={profilePicture}
+      quickDescription={quickDescription}
     />
     <ContactMe email={email} github={github} />
   </Container>
