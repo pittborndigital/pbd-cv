@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'CV - Christopher Pitt',
-    lastUpdated: '2018-05-25',
+    lastUpdated: '2019-03-12',
   },
   pathPrefix: '/pbd-cv',
   plugins: [
