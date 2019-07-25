@@ -22,9 +22,12 @@ import DatabaseIcon from './icon/Database'
 import PlugIcon from './icon/Plug'
 import BracketsIcon from './icon/Brackets'
 import AppiumIcon from './icon/Appium'
+import ExpoIcon from './icon/Expo'
+import GraphQLIcon from './icon/Graphql'
 
 import STYLED_COMPONENTS_ICON from './icon/StyledComponents.png'
 import UNSTATED_ICON from './icon/Unstated.png'
+import MOBX_ICON from './icon/Mobx.png'
 
 const Container = styled.div`
   display: flex;
@@ -81,6 +84,8 @@ const iconForTechnology = technology => {
       )
     case 'unstated':
       return <TechLabelImg src={UNSTATED_ICON} {...defaultProps} width={64} />
+    case 'mobx':
+      return <TechLabelImg src={MOBX_ICON} {...defaultProps} width={32} />
     case 'gatsby':
       return <GatsbyIcon {...defaultProps} />
     case 'jest':
@@ -104,6 +109,10 @@ const iconForTechnology = technology => {
       return <BracketsIcon {...defaultProps} />
     case 'appium':
       return <AppiumIcon {...defaultProps} />
+    case 'expo':
+      return <ExpoIcon {...defaultProps} />
+    case 'graphql':
+      return <GraphQLIcon {...defaultProps} />
     default:
       return null
   }
