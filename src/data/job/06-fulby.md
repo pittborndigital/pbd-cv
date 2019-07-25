@@ -1,14 +1,14 @@
 ---
 from: "2019-01"
-to: ""
+to: "2019-04"
 title: "Full Stack React Native Developer"
 employer: "FulbyApp"
 location: "London"
 technologies: ["react", "react-native", "unstated", "node", "firebase"]
 ---
 
-Backend: Firebase cloud functions, authentication, one-time-passwords, realtime database.
+Full stack development of an iOS and Android app built using React Native and the Firebase ecosystem.
 
-Frontend: React Native iOS and Android App.
+The backend is comprised of Firebase functions, a realtime database and a notifications system. The front-end is a React-Native app using flux architecture powered by Unstated.
 
-Due to be released to the app stores in April 2019.
+Currently in Beta test and due to be released to the app stores in Q4 2019.
