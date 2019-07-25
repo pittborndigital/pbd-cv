@@ -1,2 +1,0 @@
-webpackJsonp([60335399758886],{101:function(t,a){t.exports={data:{site:{siteMetadata:{title:"CV - Christopher Pitt",lastUpdated:"2018-05-25"}}},layoutContext:{}}}});
-//# sourceMappingURL=path----40fbf2ba5cef3ca24681.js.map
