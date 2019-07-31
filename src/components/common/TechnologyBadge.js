@@ -24,6 +24,7 @@ import BracketsIcon from './icon/Brackets'
 import AppiumIcon from './icon/Appium'
 import ExpoIcon from './icon/Expo'
 import GraphQLIcon from './icon/Graphql'
+import TypeScriptIcon from './icon/TypeScript'
 
 import STYLED_COMPONENTS_ICON from './icon/StyledComponents.png'
 import UNSTATED_ICON from './icon/Unstated.png'
@@ -113,6 +114,8 @@ const iconForTechnology = technology => {
       return <ExpoIcon {...defaultProps} />
     case 'graphql':
       return <GraphQLIcon {...defaultProps} />
+    case 'typescript':
+      return <TypeScriptIcon {...defaultProps} />
     default:
       return null
   }

@@ -4,7 +4,7 @@ to: "2019-07"
 title: "Lead React Native Developer"
 employer: "Floom Ltd"
 location: "London"
-technologies: ["react", "react-native", "mobx", "firebase", "expo", "graphql"]
+technologies: ["react", "react-native", "mobx", "firebase", "expo", "graphql", "typescript"]
 ---
 
 FloomX:
