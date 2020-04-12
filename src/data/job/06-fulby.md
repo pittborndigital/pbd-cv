@@ -9,8 +9,8 @@ technologies: ["react", "react-native", "unstated", "node", "firebase"]
 
 Fulby - Currently in open beta on the app stores:
 
-* https://play.google.com/store/apps/details?id=com.fulbyapp
 * https://testflight.apple.com/join/Kaf6t9M3
+* https://play.google.com/store/apps/details?id=com.fulbyapp
 
 Full stack development of an iOS and Android app built using React Native and the Firebase ecosystem.
 
